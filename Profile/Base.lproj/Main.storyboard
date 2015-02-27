@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gZw-DR-CRi">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--My Profile-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Profile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,179 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dan's first app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYL-IW-blj">
+                                <rect key="frame" x="16" y="82" width="568" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="WIM-je-gkM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndc-8I-uTT">
+                                <rect key="frame" x="21" y="158" width="557" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Info">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mGV-Ql-xbf" kind="presentation" id="nQg-JZ-poQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsi-ls-hG9">
+                                <rect key="frame" x="21" y="207" width="557" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Goals">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eUg-5I-sDp" kind="show" id="UTc-Ub-NMO"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImage" translatesAutoresizingMaskIntoConstraints="NO" id="pDr-Eo-lUm">
+                                <rect key="frame" x="155" y="293" width="290" height="195"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="195" id="HcV-PM-pUf"/>
+                                    <constraint firstAttribute="width" constant="290" id="RUZ-VC-NmP"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="pDr-Eo-lUm" secondAttribute="centerX" id="1fX-i6-6C1"/>
+                            <constraint firstItem="dYL-IW-blj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="1kT-1d-zz2"/>
+                            <constraint firstItem="ndc-8I-uTT" firstAttribute="leading" secondItem="Lsi-ls-hG9" secondAttribute="leading" id="1ls-c5-di3"/>
+                            <constraint firstItem="pDr-Eo-lUm" firstAttribute="top" secondItem="Lsi-ls-hG9" secondAttribute="bottom" constant="49" id="2Lf-NY-2ns"/>
+                            <constraint firstItem="dYL-IW-blj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2ra-ph-S0e"/>
+                            <constraint firstItem="Lsi-ls-hG9" firstAttribute="top" secondItem="ndc-8I-uTT" secondAttribute="bottom" constant="8" id="7nV-XJ-qEj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pDr-Eo-lUm" secondAttribute="bottom" constant="108" id="8O7-9A-PAu"/>
+                            <constraint firstItem="ndc-8I-uTT" firstAttribute="trailing" secondItem="dYL-IW-blj" secondAttribute="trailing" constant="-6" id="8ha-hr-m9E"/>
+                            <constraint firstItem="Lsi-ls-hG9" firstAttribute="trailing" secondItem="ndc-8I-uTT" secondAttribute="trailing" id="B0c-y6-yNp"/>
+                            <constraint firstItem="pDr-Eo-lUm" firstAttribute="top" secondItem="Lsi-ls-hG9" secondAttribute="bottom" constant="45" id="EWy-9O-48o"/>
+                            <constraint firstItem="pDr-Eo-lUm" firstAttribute="trailing" secondItem="Lsi-ls-hG9" secondAttribute="trailing" id="Gld-xY-N9C"/>
+                            <constraint firstItem="ndc-8I-uTT" firstAttribute="trailing" secondItem="dYL-IW-blj" secondAttribute="trailing" constant="-6" id="IOH-vd-wbt"/>
+                            <constraint firstItem="pDr-Eo-lUm" firstAttribute="leading" secondItem="Lsi-ls-hG9" secondAttribute="leading" id="LKp-Uy-KtW"/>
+                            <constraint firstItem="ndc-8I-uTT" firstAttribute="top" secondItem="dYL-IW-blj" secondAttribute="bottom" constant="8" id="S3M-D0-6yh"/>
+                            <constraint firstItem="ndc-8I-uTT" firstAttribute="top" secondItem="dYL-IW-blj" secondAttribute="bottom" constant="8" id="TrC-3C-h19"/>
+                            <constraint firstItem="ndc-8I-uTT" firstAttribute="leading" secondItem="dYL-IW-blj" secondAttribute="leading" constant="5" id="YcE-Y9-vLe"/>
+                            <constraint firstItem="ndc-8I-uTT" firstAttribute="top" secondItem="dYL-IW-blj" secondAttribute="bottom" constant="8" id="c7O-55-88r"/>
+                            <constraint firstItem="Lsi-ls-hG9" firstAttribute="top" secondItem="ndc-8I-uTT" secondAttribute="bottom" constant="8" id="coa-7d-OMO"/>
+                            <constraint firstItem="pDr-Eo-lUm" firstAttribute="top" secondItem="Lsi-ls-hG9" secondAttribute="bottom" constant="49" id="eku-M6-CoN"/>
+                            <constraint firstItem="ndc-8I-uTT" firstAttribute="leading" secondItem="dYL-IW-blj" secondAttribute="leading" constant="5" id="gHg-ER-jaY"/>
+                            <constraint firstItem="Lsi-ls-hG9" firstAttribute="leading" secondItem="ndc-8I-uTT" secondAttribute="leading" id="lbg-bC-I0J"/>
+                            <constraint firstItem="pDr-Eo-lUm" firstAttribute="leading" secondItem="Lsi-ls-hG9" secondAttribute="leading" id="qpL-fO-kUi"/>
+                            <constraint firstItem="pDr-Eo-lUm" firstAttribute="trailing" secondItem="Lsi-ls-hG9" secondAttribute="trailing" id="sr5-8o-caq"/>
+                            <constraint firstItem="dYL-IW-blj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wdb-jm-Aar"/>
+                            <constraint firstItem="ndc-8I-uTT" firstAttribute="trailing" secondItem="Lsi-ls-hG9" secondAttribute="trailing" id="wj8-PX-JLd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1ls-c5-di3"/>
+                                <exclude reference="8ha-hr-m9E"/>
+                                <exclude reference="S3M-D0-6yh"/>
+                                <exclude reference="c7O-55-88r"/>
+                                <exclude reference="gHg-ER-jaY"/>
+                                <exclude reference="wj8-PX-JLd"/>
+                                <exclude reference="7nV-XJ-qEj"/>
+                                <exclude reference="2Lf-NY-2ns"/>
+                                <exclude reference="Gld-xY-N9C"/>
+                                <exclude reference="LKp-Uy-KtW"/>
+                                <exclude reference="eku-M6-CoN"/>
+                                <exclude reference="qpL-fO-kUi"/>
+                                <exclude reference="sr5-8o-caq"/>
+                                <exclude reference="8O7-9A-PAu"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="My Profile" id="s3a-Zu-SRx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1192" y="314"/>
+        </scene>
+        <!--Goals-->
+        <scene sceneID="LNO-Kv-I85">
+            <objects>
+                <viewController title="Goals" id="eUg-5I-sDp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hSN-6B-sk7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dwl-2c-XfT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M9m-gt-ekx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zxe-Qz-eJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1930" y="314"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="xCY-Jt-EZj">
+            <objects>
+                <viewController title="Info" id="WD3-Ye-wHa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Skz-EV-kd7"/>
+                        <viewControllerLayoutGuide type="bottom" id="hZr-yA-O8T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o7z-Oq-QLN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="b4J-ER-jSE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ajd-iq-z2Q">
+                            <connections>
+                                <segue destination="3x2-L8-IWv" kind="unwind" unwindAction="unwindFromSegue:" id="Q1i-Ka-0cC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tn4-Lu-Vz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3x2-L8-IWv" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2037" y="1149"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dhQ-mQ-y6E">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gZw-DR-CRi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6MR-eA-1gd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mRU-gF-gJU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cli-lg-YQx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1192" y="-493"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tld-gi-0CF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mGV-Ql-xbf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vzw-Vf-KJK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WD3-Ye-wHa" kind="relationship" relationship="rootViewController" id="l0q-cU-0iK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Co-mV-3F7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1192" y="1149"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="profileImage" width="259" height="195"/>
+    </resources>
 </document>
