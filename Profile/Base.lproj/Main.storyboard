@@ -5,6 +5,58 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Login-->
+        <scene sceneID="vSp-1f-411">
+            <objects>
+                <viewController title="Login" id="att-oH-HW0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tjr-eE-JAJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="3lo-jy-lBC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V7X-1x-oaN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otB-tE-gaM">
+                                <rect key="frame" x="24" y="209" width="550" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rj0-hr-dNi">
+                                <rect key="frame" x="24" y="258" width="550" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XD-hW-dad">
+                                <rect key="frame" x="24" y="324" width="550" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.21492508369999999" blue="0.17937788830000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="dYP-68-HyO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="otB-tE-gaM" firstAttribute="leading" secondItem="rj0-hr-dNi" secondAttribute="leading" id="3Vi-WG-Y0U"/>
+                            <constraint firstItem="rj0-hr-dNi" firstAttribute="trailing" secondItem="5XD-hW-dad" secondAttribute="trailing" id="Ef9-Kp-s6T"/>
+                            <constraint firstItem="otB-tE-gaM" firstAttribute="top" secondItem="tjr-eE-JAJ" secondAttribute="bottom" constant="145" id="Ggl-S8-nux"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="otB-tE-gaM" secondAttribute="trailing" constant="10" id="K3I-Py-k1t"/>
+                            <constraint firstItem="otB-tE-gaM" firstAttribute="leading" secondItem="V7X-1x-oaN" secondAttribute="leadingMargin" constant="8" id="Tjg-DA-oaV"/>
+                            <constraint firstItem="5XD-hW-dad" firstAttribute="top" secondItem="rj0-hr-dNi" secondAttribute="bottom" constant="36" id="VkY-ar-Yic"/>
+                            <constraint firstItem="rj0-hr-dNi" firstAttribute="leading" secondItem="5XD-hW-dad" secondAttribute="leading" id="Wc8-dA-9ep"/>
+                            <constraint firstItem="rj0-hr-dNi" firstAttribute="top" secondItem="otB-tE-gaM" secondAttribute="bottom" constant="19" id="h4k-9X-zL9"/>
+                            <constraint firstItem="otB-tE-gaM" firstAttribute="trailing" secondItem="rj0-hr-dNi" secondAttribute="trailing" id="rdS-8U-DTy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" id="NoY-Ya-6rV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="92Q-27-v0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2005" y="-485"/>
+        </scene>
         <!--My Profile-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -105,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1192" y="314"/>
+            <point key="canvasLocation" x="2044" y="302"/>
         </scene>
         <!--Goals-->
         <scene sceneID="LNO-Kv-I85">
@@ -123,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zxe-Qz-eJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1930" y="314"/>
+            <point key="canvasLocation" x="2782" y="302"/>
         </scene>
         <!--Info-->
         <scene sceneID="xCY-Jt-EZj">
@@ -149,7 +201,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tn4-Lu-Vz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="3x2-L8-IWv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2037" y="1149"/>
+            <point key="canvasLocation" x="2889" y="1137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dhQ-mQ-y6E">
@@ -162,7 +214,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mRU-gF-gJU"/>
+                        <segue destination="att-oH-HW0" kind="relationship" relationship="rootViewController" id="fHl-cd-6zB"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cli-lg-YQx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -185,7 +237,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Co-mV-3F7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1192" y="1149"/>
+            <point key="canvasLocation" x="2044" y="1137"/>
         </scene>
     </scenes>
     <resources>
